@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfTestGDI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTestGDI"
+        xmlns:sc="clr-namespace:SimpleChart;assembly=SimpleChart"
+        xmlns:cc="clr-namespace:ClassicChart;assembly=ClassicChart"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="600"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <cc:ClassicPloter x:Name="CurveECGI" Grid.Row="0" Title="I" Margin="2" Grid.Column="0"></cc:ClassicPloter>
+        <cc:ClassicPloter x:Name="CurveECGII" Grid.Row="1" Title="II" Margin="2" Grid.Column="0"></cc:ClassicPloter>
+        <cc:ClassicPloter x:Name="CurveECGIII" Grid.Row="2" Title="III" Margin="2" Grid.Column="0"></cc:ClassicPloter>
+        <cc:ClassicPloter x:Name="CurveECGaVR" Grid.Row="3" Title="aVR" Margin="2" Grid.Column="0"></cc:ClassicPloter>
+        <cc:ClassicPloter x:Name="CurveECGaVL" Grid.Row="4" Title="aVL" Margin="2" Grid.Column="0"></cc:ClassicPloter>
+        <cc:ClassicPloter x:Name="CurveECGaVF" Grid.Row="5" Title="aVF" Margin="2" Grid.Column="0"></cc:ClassicPloter>
+        <cc:ClassicPloter x:Name="CurveECGV1" Grid.Row="0" Title="V1" Margin="2" Grid.Column="1"></cc:ClassicPloter>
+        <cc:ClassicPloter x:Name="CurveECGV2" Grid.Row="1" Title="V2" Margin="2" Grid.Column="1"></cc:ClassicPloter>
+        <cc:ClassicPloter x:Name="CurveECGV3" Grid.Row="2" Title="V3" Margin="2" Grid.Column="1"></cc:ClassicPloter>
+        <cc:ClassicPloter x:Name="CurveECGV4" Grid.Row="3" Title="V4" Margin="2" Grid.Column="1"></cc:ClassicPloter>
+        <cc:ClassicPloter x:Name="CurveECGV5" Grid.Row="4" Title="V5" Margin="2" Grid.Column="1"></cc:ClassicPloter>
+        <cc:ClassicPloter x:Name="CurveECGV6" Grid.Row="5" Title="V6" Margin="2" Grid.Column="1"></cc:ClassicPloter>
+    </Grid>
+</Window>
