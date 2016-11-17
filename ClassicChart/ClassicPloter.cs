@@ -52,15 +52,15 @@ namespace ClassicChart
             _CurveBuffLen = 2000;
             _CurveDatainIndex = 0;
             _CurveDataDisIndex = 0;
-            
+
 
             this.Loaded += ClassicPloter_Loaded;
-            
+
         }
 
         ~ClassicPloter()
         {
-            
+
         }
 
         public void PushData(double data)
@@ -100,7 +100,7 @@ namespace ClassicChart
                         _CurveDatainIndex = 0;
                     }
                 }
-                
+
             }
         }
 
@@ -163,7 +163,7 @@ namespace ClassicChart
 
                             _DataBuff[i + _CurveBuffLen - datas.Count] = new Point(i + _CurveBuffLen - datas.Count, dTemp);
                         }
-                        
+
                     }
 
                 }
@@ -192,7 +192,7 @@ namespace ClassicChart
                             _CurveDatainIndex = 0;
                         }
                     }
-                    
+
                 }
 
             }
@@ -351,7 +351,7 @@ namespace ClassicChart
 
             // Retrieve the DrawingContext in order to create new drawing content.
             DrawingContext dc = _TopVisual.RenderOpen();
-            
+
             dc.DrawText(new FormattedText(Title, new CultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("宋体"), 20, TitleForceGround), new Point(20, 5));
 
             if (ECG1mvTagEnable)
@@ -362,7 +362,7 @@ namespace ClassicChart
                 dc.DrawLine(tagPen, new Point(iStartX, dH + (ActualHeight - dH) / 2), new Point(iStartX + 5, dH + (ActualHeight - dH) / 2));
                 dc.DrawLine(tagPen, new Point(iStartX + 5, dH + (ActualHeight - dH) / 2), new Point(iStartX + 5, (ActualHeight - dH) / 2));
                 dc.DrawLine(tagPen, new Point(iStartX + 5, (ActualHeight - dH) / 2), new Point(iStartX + 10, (ActualHeight - dH) / 2));
-                dc.DrawLine(tagPen, new Point(iStartX + 10, (ActualHeight - dH) / 2), new Point(iStartX+10, dH + (ActualHeight - dH) / 2));
+                dc.DrawLine(tagPen, new Point(iStartX + 10, (ActualHeight - dH) / 2), new Point(iStartX + 10, dH + (ActualHeight - dH) / 2));
                 dc.DrawLine(tagPen, new Point(iStartX + 10, dH + (ActualHeight - dH) / 2), new Point(iStartX + 15, dH + (ActualHeight - dH) / 2));
 
                 dc.DrawText(new FormattedText("1mV", new CultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("宋体"), 15, TitleForceGround), new Point(iStartX + 20, (ActualHeight - dH) / 2));
@@ -380,7 +380,7 @@ namespace ClassicChart
             // Retrieve the DrawingContext in order to create new drawing content.
             DrawingContext dc = _CurveVisual.RenderOpen();
 
-            
+
             // Persist the drawing content.
             dc.Close();
 
